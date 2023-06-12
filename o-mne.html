@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/site.webmanifest">
+
+
+<title>Názory klientů na naši tvorbu webových stránek| Webigo</title>
+</head>
+
+
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">david mecir</a></div>
+                <ul class="links">
+                    <li><a href="index.html" class="nav-link">Domů</a></li>
+                    <li><a href="cenik.html" class="nav-link">Ceník</a></li>
+                    <li><a href="o-mne.html" class="nav-link">Reference</a></li>
+                </ul>
+                <a href="kontakt.html" class="action-btn">Kontakt</a>
+                <div class="toggle-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+    
+                <div class="dropdown-menu">
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="cenik.html">Ceník</a></li>
+                    <li><a href="o-mne.html">Reference</a></li>
+                    <li><a href="kontakt.html" class="action_btn">Kontakt</a></li>
+                </div>
+        </div>
+        <!-- <div class="vlny">
+            <svg  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" ><path  d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill" fill="#013220" fill-opacity="1"></path></svg>
+        </div> -->
+    </header>
+
+    <main>
+        <div class="vystavba">
+            Stále intenzivně pracujeme na dokončení našeho webu
+        </div>
+    </main>
+
+    <footer>
+        <p> Webigo © 2023 | Všechna práva vyhrazena</p>
+    </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+    
+        toggleBtn.onclick = function (){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+    
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            :'fa-solid fa-bars'
+        }
+    </script>
+
+<script>
+    document.querySelectorAll('.nav-link').forEach
+    (link =>{
+        if(link.href === window.location.href){
+            link.setAttribute('aria-current', 'page')
+        }
+    })
+    </script>
+
+<script>
+    const body = document.body;
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () =>{
+        const currentScroll = window.pageYOffset
+
+        if (currentScroll <= 0){
+            body.classList.remove("scroll-up")
+        }
+
+        if (currentScroll > lastScroll && !body.classList.contains("scroll-down")){
+            body.classList.remove("scroll-up")
+            body.classList.add("scroll-down")
+        }
+
+        if (currentScroll < lastScroll && body.classList.contains("scroll-down")){
+            body.classList.remove("scroll-down")
+            body.classList.add("scroll-up")
+        }
+
+        lastScroll = currentScroll;
+    })
+</script>
+
+</body>
+</html>
