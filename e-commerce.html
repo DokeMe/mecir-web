@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesionální tvorba webových stránek na míru | Webigo</title>
+
+     <!-- fonty -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&display=swap" rel="stylesheet">
+ 
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300&display=swap" rel="stylesheet">
+ 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+ 
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+ 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <header id="hero-sec">
+    <div class="menu-container">
+    </div>
+      <div class="logo">
+        <a href="index.html">
+          <h1 data-value="WEBIGO">WEBIGO</h1>
+        </a>
+      </div>
+
+      <div id="menuBtn">
+        <img src="img/menu2.png" id="menu">
+      </div>
+
+      <div class="hide-btn">
+        <a href="kontakt.html" class="hide-btn-a">Kontakt</a>
+      </div>
+    
+
+    <!-- menu-slider  -->
+    <div id="sideNav">
+      <nav>
+        <ul>
+          <li><a href="index.html"><span id="span-menu">I</span>Home</a></li>
+          <li><a href="reference.html"><span id="span-menu">II</span>Reference</a></li>
+          <li><a href="kontakt.html"><span id="span-menu">III</span>Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="second-menu">
+        <li><a href="webové-stránky.html" class="underline-thru-blue">Webové stránky</a></li>
+        <li><a href="e-commerce.html" class="underline-thru-blue">E-shop</a></li>
+        <li><a href="mobilni-aplikace.html" class="underline-thru-blue">Mobilní aplikace</a></li>
+      </div>
+
+      <div class="menu-contacts-left">
+        <a href="tel:+420602951650" class="underline-thru-black">[+420] 602 951 650</a>
+        <a href="mailto:info@webigo.cz" class="underline-thru-black">info@webigo.cz</a>
+      </div>
+      <div class="menu-contacts-right">
+        <a href="#" class="underline-thru-black">Facebook</a>
+        <a href="#" class="underline-thru-black">Instagram</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- <div class="logos">
+      <div class="logos-slide">
+        <img src="./icons/JavaScript.svg" class="colored-svg">
+        <img src="./icons/HTML.svg" class="colored-svg">
+        <img src="./icons/React.svg" class="colored-svg">
+        <img src="./icons/Figma.svg" class="colored-svg">
+        <img src="./icons/PHP.svg" class="colored-svg">
+        <img src="./icons/TypeScript.svg" class="colored-svg">
+        <img src="./icons/NodeJS.svg" class="colored-svg">
+        <img src="./icons/Python.svg" class="colored-svg">
+        <img src="./icons/Notion.svg" class="colored-svg">
+        <img src="./icons/CSS.svg" class="colored-svg">
+        <img src="./icons/VueJS.svg" class="colored-svg">
+        <img src="./icons/Java.svg" class="colored-svg">
+      </div>
+    </div> -->
+
+    <section id="header-sec">
+      <div class="mapp-container-header">
+        <div class="nadpis-mapp">
+          <h1>Malé i velké <span id="hero-text-gradient">e-shopy</span> na míru</h1>
+        </div>
+
+        <div class="arrow-scroll">
+          <a href="#web-sekce-uvod"><img src="img/arrow-down-white.svg" alt=""></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="web-sekce-uvod">
+      <div class="uvodni-text-container">
+        <!-- <div class="podnadpis-webove-str">
+            <p>Co očekávat</p>
+          </div> -->
+        <div class="svg-pattern-web">
+          <img src="./img/dots.svg" class="dot-pattern-web colored-svg">
+        </div>
+
+        <div class="uvodni-text">
+          <p>
+            Nabízíme řešení pro různé typy e-shopů, ať už jsou to menší podniky, které vyrostly nad standardní šablony, nebo velké značky, které potřebují <span id="primary">komplexní</span> a plně <span id="primary">přizpůsobené</span> funkce a procesy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <div id="blob"></div>
+    <div id="blur"></div> 
+
+<script src="app.js"></script>   
+
+<script>
+  var menuBtn = document.getElementById("menuBtn");
+  var sideNav = document.getElementById("sideNav");
+  var menu = document.getElementById("menu");
+  var hideBtn = document.getElementsByClassName("hide-btn")[0];
+  var hideBtn2 = document.getElementsByClassName("hide-btn-a")[0];
+  var menu = document.querySelector('.menu-container');
+  var hasScrolledPast90vh = false;
+
+  function toggleMenu() {
+    if (sideNav.style.right == "-100%") {
+      hideBtn.style.display = 'none';
+      hideBtn2.style.display = 'none';
+      sideNav.style.right = "0";
+      menu.src = "img/close3.png";
+      document.body.classList.add("menu-open");
+    } else {
+      sideNav.style.right = "-100%";
+      menu.src = "img/menu2.png";
+      document.body.classList.remove("menu-open");
+
+      setTimeout(function () {
+      hideBtn.style.display = 'block';
+      hideBtn2.style.display = 'block';
+      }, 300);
+    }
+  }
+
+  menuBtn.addEventListener("click", toggleMenu);
+</script>
+
+<script>
+  window.addEventListener('scroll', function() {
+  if (window.scrollY >= window.innerHeight * 0.9) {
+    if (!hasScrolledPast90vh) {
+      if (!sideNav.classList.contains("menu-open")) {
+        menu.classList.add('menu-scrolled');
+      }
+      hasScrolledPast90vh = true;
+    }
+  } else {
+    if (!sideNav.classList.contains("menu-open")) {
+      menu.classList.remove('menu-scrolled');
+      hasScrolledPast90vh = false;
+    }
+  }
+});
+</script>
+
+</body>
+</html>
