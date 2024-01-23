@@ -101,7 +101,7 @@
     .hide-btn a {
         padding: 15px 1.2em !important;
         font-size: 0.8rem !important;
-        top: 18px !important;
+        top: 10px !important;
         right: 70px !important;
     }
 
@@ -109,7 +109,7 @@
         width: 30px !important;
         height: 30px !important;
         right: 1em !important;
-        top: 20px !important;
+        top: 12px !important;
     }
 
     #menuBtn img {
@@ -166,6 +166,10 @@
 
     .footer-container{
         width: 95% !important;
+    }
+
+    .menu-container{
+        height: 4.5rem !important;
     }
 }
 
@@ -289,7 +293,7 @@ body.menu-open {
 .logo {
     position: fixed;
     left: 40px;
-    top: 0px;
+    top: 3px;
     font-size: 1.1rem;
     color: #ffffff;
     font-family: 'Bricolage Grotesque', sans-serif;
@@ -1126,7 +1130,7 @@ nav ul li a:hover,
 }
 
 .menu-scrolled {
-    background-color: black; /* Change the background color when scrolled */
+    background-color: black;
     opacity: .8;
 }
 
