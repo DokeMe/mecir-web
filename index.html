@@ -48,20 +48,20 @@
   <header id="hero-sec">
     <div class="menu-container">
     </div>
-      <div class="logo">
-        <a href="index.html">
-          <h1 data-value="WEBIGO">WEBIGO</h1>
-        </a>
-      </div>
+    <div class="logo">
+      <a href="index.html">
+        <h1 data-value="WEBIGO">WEBIGO</h1>
+      </a>
+    </div>
 
-      <div id="menuBtn">
-        <img src="img/menu2.png" id="menu">
-      </div>
+    <div id="menuBtn">
+      <img src="img/menu2.png" id="menu">
+    </div>
 
-      <div class="hide-btn">
-        <a href="kontakt.html" class="hide-btn-a">Kontakt</a>
-      </div>
-    
+    <div class="hide-btn">
+      <a href="kontakt.html" class="hide-btn-a">Kontakt</a>
+    </div>
+
 
     <!-- menu-slider  -->
     <div id="sideNav">
@@ -72,6 +72,7 @@
           <li><a href="kontakt.html"><span id="span-menu">III</span>Kontakt</a></li>
         </ul>
       </nav>
+      
       <div class="second-menu">
         <li><a href="webové-stránky.html" class="underline-thru-blue">Webové stránky</a></li>
         <li><a href="e-commerce.html" class="underline-thru-blue">E-shop</a></li>
@@ -150,8 +151,8 @@
       <div class="ref-single even">
         <div class="wrapper__img">
           <img src="./img/vision-1.png" alt="" class="ref-img">
-          </div>
-          <p>Vizualizace designu - Webová stránka</p>
+        </div>
+        <p>Vizualizace designu - Webová stránka</p>
         <div class="attribute">
           <p>Mobilní aplikace</p>
           <p>Správa sociálních sítí</p>
@@ -164,7 +165,7 @@
       <div class="ref-single odd">
         <div class="wrapper__img">
           <img src="./img/vision-3.png" alt="" class="ref-img">
-          </div>
+        </div>
         <p>Vizualizace designu - Webová stránka</p>
         <div class="attribute">
           <p>Design</p>
@@ -212,10 +213,10 @@
   <footer id="footer-sec">
     <div class="footer-container">
       <div class="footer-legal">
-        <p>© All rights reserved 2023 | <a href="#uvodni-sekce-index">WEBIGO</a> </p>
+        <p>© All rights reserved <span id="current-year"></span> | <a href="#uvodni-sekce-index">WEBIGO</a> </p>
         <a href="#" class="underline-thru">Zásady ochrany osobních údajů</a>
       </div>
-    </div> 
+    </div>
   </footer>
 
   <div id="blob"></div>
@@ -224,53 +225,57 @@
   <script src="app.js"></script>
 
   <script>
-  var menuBtn = document.getElementById("menuBtn");
-  var sideNav = document.getElementById("sideNav");
-  var menu = document.getElementById("menu");
-  var hideBtn = document.getElementsByClassName("hide-btn")[0];
-  var hideBtn2 = document.getElementsByClassName("hide-btn-a")[0];
-  var menu = document.querySelector('.menu-container');
-  var hasScrolledPast90vh = false;
+    var menuBtn = document.getElementById("menuBtn");
+    var sideNav = document.getElementById("sideNav");
+    var menu = document.getElementById("menu");
+    var hideBtn = document.getElementsByClassName("hide-btn")[0];
+    var hideBtn2 = document.getElementsByClassName("hide-btn-a")[0];
+    var menu = document.querySelector('.menu-container');
+    var hasScrolledPast90vh = false;
 
-  function toggleMenu() {
-    if (sideNav.style.right == "-100%") {
-      hideBtn.style.display = 'none';
-      hideBtn2.style.display = 'none';
-      sideNav.style.right = "0";
-      menu.src = "img/close3.png";
-      document.body.classList.add("menu-open");
-    } else {
-      sideNav.style.right = "-100%";
-      menu.src = "img/menu2.png";
-      document.body.classList.remove("menu-open");
+    function toggleMenu() {
+      if (sideNav.style.right == "-100%") {
+        hideBtn.style.display = 'none';
+        hideBtn2.style.display = 'none';
+        sideNav.style.right = "0";
+        menu.src = "img/close3.png";
+        document.body.classList.add("menu-open");
+      } else {
+        sideNav.style.right = "-100%";
+        menu.src = "img/menu2.png";
+        document.body.classList.remove("menu-open");
 
-      setTimeout(function () {
-      hideBtn.style.display = 'block';
-      hideBtn2.style.display = 'block';
-      }, 300);
-    }
-  }
-
-  menuBtn.addEventListener("click", toggleMenu);
-</script>
-
-<script>
-  window.addEventListener('scroll', function() {
-  if (window.scrollY >= window.innerHeight * 0.9) {
-    if (!hasScrolledPast90vh) {
-      if (!sideNav.classList.contains("menu-open")) {
-        menu.classList.add('menu-scrolled');
+        setTimeout(function () {
+          hideBtn.style.display = 'block';
+          hideBtn2.style.display = 'block';
+        }, 300);
       }
-      hasScrolledPast90vh = true;
     }
-  } else {
-    if (!sideNav.classList.contains("menu-open")) {
-      menu.classList.remove('menu-scrolled');
-      hasScrolledPast90vh = false;
-    }
-  }
-});
-</script>
+
+    menuBtn.addEventListener("click", toggleMenu);
+  </script>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      if (window.scrollY >= window.innerHeight * 0.9) {
+        if (!hasScrolledPast90vh) {
+          if (!sideNav.classList.contains("menu-open")) {
+            menu.classList.add('menu-scrolled');
+          }
+          hasScrolledPast90vh = true;
+        }
+      } else {
+        if (!sideNav.classList.contains("menu-open")) {
+          menu.classList.remove('menu-scrolled');
+          hasScrolledPast90vh = false;
+        }
+      }
+    });
+  </script>
+
+  <script>
+    document.getElementById('current-year').innerText = new Date().getFullYear();
+  </script>
 
 </body>
 

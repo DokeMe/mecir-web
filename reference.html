@@ -1,3 +1,4 @@
+<!-- podbarveni menu musi byt stale zaple -->
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -25,47 +26,158 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <header id="hero-sec">
-        <div class="logo">
-          <a href="index.html"><h1 data-value="WEBIGO">WEBIGO</h1></a>
-        </div>
-    
-        <div id="sideNav">
-          <nav>
-            <ul>
-              <li><a href="index.html"><span id="span-menu">I</span>Home</a></li>
-              <li><a href="reference.html"><span id="span-menu">II</span>Reference</a></li>
-              <li><a href="kontakt.html"><span id="span-menu">III</span>Kontakt</a></li>
-            </ul>
-          </nav>
-          <div class="second-menu">
-            <li><a href="webové-stránky.html" class="underline-thru-blue">Webové stránky</a></li>
-            <li><a href="e-commerce.html" class="underline-thru-blue">E-shop</a></li>
-            <li><a href="mobilni-aplikace.html" class="underline-thru-blue">Mobilní aplikace</a></li>
-          </div>
-    
-          <div class="menu-contacts-left">
-            <a href="tel:+420602951650" class="underline-thru-black">[+420] 602 951 650</a>
-            <a href="mailto:info@webigo.cz" class="underline-thru-black">info@webigo.cz</a>
-          </div>
-          <div class="menu-contacts-right">
-            <a href="#" class="underline-thru-black">Facebook</a>
-            <a href="#" class="underline-thru-black">Instagram</a>
-          </div>
-        </div>
-    
-      <div id="menuBtn">
-        <img src="img/menu2.png" id="menu">
+  <header id="hero-sec">
+    <div class="menu-container">
     </div>
-    
-      <div class="hide-btn">
-          <a href="kontakt.html">Kontakt</a>
+    <div class="logo">
+      <a href="index.html">
+        <h1 data-value="WEBIGO">WEBIGO</h1>
+      </a>
+    </div>
+
+    <div id="menuBtn">
+      <img src="img/menu2.png" id="menu">
+    </div>
+
+    <div class="hide-btn">
+      <a href="kontakt.html" class="hide-btn-a">Kontakt</a>
+    </div>
+
+
+    <!-- menu-slider  -->
+    <div id="sideNav">
+      <nav>
+        <ul>
+          <li><a href="index.html"><span id="span-menu">I</span>Home</a></li>
+          <li><a href="reference.html"><span id="span-menu">II</span>Reference</a></li>
+          <li><a href="kontakt.html"><span id="span-menu">III</span>Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="second-menu">
+        <li><a href="webové-stránky.html" class="underline-thru-blue">Webové stránky</a></li>
+        <li><a href="e-commerce.html" class="underline-thru-blue">E-shop</a></li>
+        <li><a href="mobilni-aplikace.html" class="underline-thru-blue">Mobilní aplikace</a></li>
       </div>
-    </header>
+
+      <div class="menu-contacts-left">
+        <a href="tel:+420602951650" class="underline-thru-black">[+420] 602 951 650</a>
+        <a href="mailto:info@webigo.cz" class="underline-thru-black">info@webigo.cz</a>
+      </div>
+      <div class="menu-contacts-right">
+        <a href="#" class="underline-thru-black">Facebook</a>
+        <a href="#" class="underline-thru-black">Instagram</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="reference-container">
+
+      <div class="reference-header">
+        <h2><span id="hero-text-gradient">Projekty</span>, na nichž jsme pracovali</h2>
+      </div>
+    </div>
+
+    <section id="ref-grid">
+      <div class="row">
+        <img src="./img/Frame 1.png" alt="" class="reference-img">
+        <img src="./img/Frame 2.png" alt="" class="reference-img">
+        <img src="./img/Frame 3.png" alt="" class="reference-img">
+      </div>
+      <div class="row">
+        <img src="./img/ref-img-test.png" alt="" class="reference-img">
+        <img src="./img/ref-img-test.png" alt="" class="reference-img">
+        <img src="./img/ref-img-test.png" alt="" class="reference-img">
+      </div>
+    </section>
+
+    <section id="get-in-touch">
+      <div class="git-container">
+        <h5>Už Vám stačí jen poslední krok.<br> <span id="hero-text-gradient">Ozvat se...</span></h5>
+        <div class="call-to-action wrapper-btn">
+          <a href="kontakt.html" class="button-cta">Kontaktujte nás</a>
+        </div>
+        <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+          version="1.1">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+              <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer-sec">
+    <div class="footer-container">
+      <div class="footer-legal">
+        <p>© All rights reserved <span id="current-year"></span> | <a href="#uvodni-sekce-index">WEBIGO</a> </p>
+        <a href="#" class="underline-thru">Zásady ochrany osobních údajů</a>
+      </div>
+    </div> 
+  </footer>
 
     <div id="blob"></div>
     <div id="blur"></div> 
 
-<script src="app.js"></script>   
+<script src="app.js"></script>  
+
+<script>
+  var menuBtn = document.getElementById("menuBtn");
+  var sideNav = document.getElementById("sideNav");
+  var menu = document.getElementById("menu");
+  var hideBtn = document.getElementsByClassName("hide-btn")[0];
+  var hideBtn2 = document.getElementsByClassName("hide-btn-a")[0];
+  var menu = document.querySelector('.menu-container');
+  var hasScrolledPast90vh = false;
+
+  function toggleMenu() {
+    if (sideNav.style.right == "-100%") {
+      hideBtn.style.display = 'none';
+      hideBtn2.style.display = 'none';
+      sideNav.style.right = "0";
+      menu.src = "img/close3.png";
+      document.body.classList.add("menu-open");
+    } else {
+      sideNav.style.right = "-100%";
+      menu.src = "img/menu2.png";
+      document.body.classList.remove("menu-open");
+
+      setTimeout(function () {
+        hideBtn.style.display = 'block';
+        hideBtn2.style.display = 'block';
+      }, 300);
+    }
+  }
+
+  menuBtn.addEventListener("click", toggleMenu);
+</script>
+
+<script>
+  window.addEventListener('scroll', function () {
+    if (window.scrollY >= window.innerHeight * 0.6) {
+      if (!hasScrolledPast90vh) {
+        if (!sideNav.classList.contains("menu-open")) {
+          menu.classList.add('menu-scrolled');
+        }
+        hasScrolledPast90vh = true;
+      }
+    } else {
+      if (!sideNav.classList.contains("menu-open")) {
+        menu.classList.remove('menu-scrolled');
+        hasScrolledPast90vh = false;
+      }
+    }
+  });
+</script>
+
+<script>
+  document.getElementById('current-year').innerText = new Date().getFullYear();
+</script>
+
 </body>
 </html>

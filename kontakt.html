@@ -144,7 +144,7 @@
     <footer id="footer-sec" style="background-color: #1a1a1a;">
       <div class="footer-container" style="background-color: #1a1a1a; padding-top: 3rem; margin-top: 0;">
         <div class="footer-legal">
-          <p>© All rights reserved 2023 | <a href="#uvodni-sekce-index">WEBIGO</a> </p>
+          <p>© All rights reserved <span id="current-year"></span> | <a href="#uvodni-sekce-index">WEBIGO</a> </p>
           <a href="#" class="underline-thru">Zásady ochrany osobních údajů</a>
         </div>
       </div> 
@@ -203,6 +203,11 @@
         }
       });
     </script>
+
+<script>
+  document.getElementById('current-year').innerText = new Date().getFullYear();
+</script>
+
 </body>
 
 </html>

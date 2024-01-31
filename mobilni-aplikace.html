@@ -182,7 +182,7 @@
 
       <div class="tvorba-zpusob">
         <h5 id="project">Waterfall</h5>
-        <div class="x-zpusob">x</div>
+        <div class="x-zpusob"></div>
         <h5 id="agile">Agile</h5>
       </div>
       <div class="tab-content" id="project-content">
@@ -275,42 +275,50 @@
 
     <section id="features-aside-sec">
       <div class="features-aside">
-      
+
         <div class="aside-text-img">
           <div class="text__part">
             <h4>Jak k vývoji přistupujeme</h4>
-            <p>Chcete změnit myšlenky v realitu? Potřebujete softwarové řešení, které pomůže vaší firmě být efektivnější nebo proniknout na nový trh? Bez ohledu na to, zda potřebujete jednoduchou aplikaci pro malý podnik nebo komplexní platformu pro velkou společnost - ve Webigo máme potřebné zkušenosti a dovednosti k vytvoření mobilní aplikace na míru, která vás dostane tam, kam chcete.</p>
+            <p>Chcete změnit myšlenky v realitu? Potřebujete softwarové řešení, které pomůže vaší firmě být efektivnější
+              nebo proniknout na nový trh? Bez ohledu na to, zda potřebujete jednoduchou aplikaci pro malý podnik nebo
+              komplexní platformu pro velkou společnost - ve Webigo máme potřebné zkušenosti a dovednosti k vytvoření
+              mobilní aplikace na míru, která vás dostane tam, kam chcete.</p>
           </div>
-         
+
           <img src="./img/ref-img-test.png" alt="">
         </div>
       </div>
-  
+
       <div class="features-aside">
         <div class="aside-text-img">
           <img src="./img/ref-img-test.png" alt="">
 
           <div class="text__part-var2">
             <h4>Klientská podpora</h4>
-            <p>Spuštěním aplikace to teprve začíná. Jsme zde, abychom Vám pomohli s vývojem dalších funkcionalit, vylepšením a údržbou. Kdykoli narazíte na problém, jsme tu pro Vás - stačí nám zavolat nebo napsat email. Reagujeme do několika hodin a snažíme se rychle řešit veškeré problémy. Vaše spokojenost je pro nás prioritou.</p>
+            <p>Spuštěním aplikace to teprve začíná. Jsme zde, abychom Vám pomohli s vývojem dalších funkcionalit,
+              vylepšením a údržbou. Kdykoli narazíte na problém, jsme tu pro Vás - stačí nám zavolat nebo napsat email.
+              Reagujeme do několika hodin a snažíme se rychle řešit veškeré problémy. Vaše spokojenost je pro nás
+              prioritou.</p>
           </div>
         </div>
       </div>
-  
+
       <div class="features-aside">
-        
+
         <div class="aside-text-img">
           <div class="text__part">
             <h4>Postaráme se o umístění aplikace do obchodů</h4>
-            <p>Vyřešíme za Vás všechny potřebné kroky pro vypuštění aplikace do světa mezi netrpělivé budoucí uživatele. Umožníme stažení Vaší aplikace z Apple App Store, Google Play nebo přímo z prohlížeče. Provedeme všechny nezbytné kroky a postaráme se o to, aby pro Vás byla nová aplikace co nejefektivnější. 
+            <p>Vyřešíme za Vás všechny potřebné kroky pro vypuštění aplikace do světa mezi netrpělivé budoucí uživatele.
+              Umožníme stažení Vaší aplikace z Apple App Store, Google Play nebo přímo z prohlížeče. Provedeme všechny
+              nezbytné kroky a postaráme se o to, aby pro Vás byla nová aplikace co nejefektivnější.
             </p>
           </div>
-         
+
           <img src="./img/ref-img-test.png" alt="">
         </div>
-      </div>  
+      </div>
     </section>
-    
+
   </main>
 
   <footer id="footer-sec">
@@ -337,7 +345,7 @@
 
     <div class="footer-container">
       <div class="footer-legal">
-        <p>© All rights reserved 2023 | <a href="#uvodni-sekce-index">WEBIGO</a> </p>
+        <p>© All rights reserved <span id="current-year"></span> | <a href="#uvodni-sekce-index">WEBIGO</a> </p>
         <a href="#" class="underline-thru">Zásady ochrany osobních údajů</a>
       </div>
     </div>
@@ -465,6 +473,10 @@
     projectTab.classList.add("active");
 
     projectTab.click();
+  </script>
+
+  <script>
+    document.getElementById('current-year').innerText = new Date().getFullYear();
   </script>
 </body>
 
