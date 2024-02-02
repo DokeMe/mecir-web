@@ -34,7 +34,9 @@
     .hero-text h2,
     .git-container h5,
     .contact-header h2,
-    .reference-header h2 {
+    .reference-header h2,
+    .nadpis-web h1,
+    .nadpis-tvorba-web h4 {
         font-size: 4rem !important;
     }
 
@@ -42,7 +44,8 @@
         max-width: 100% !important;
     }
 
-    .hero-sec-text h3 {
+    .hero-sec-text h3,
+    .uvodni-text p {
         font-size: 2.4rem !important;
     }
 
@@ -80,6 +83,27 @@
 
     nav ul li a {
         font-size: 4rem !important;
+    }
+
+    .aside-text-img {
+        width: 80% !important;
+    }
+
+    .tvorba-zpusob h5,
+    .tvorba-zpusob__eshop h5 {
+        font-size: 12rem !important;
+    }
+    .tvorba-zpusob{
+        height: 80vh !important;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .comparison-container {
+        flex-direction: column !important;
+        gap: 8rem !important;
+        width: fit-content !important;
+        margin: 0 auto !important;
     }
 }
 
@@ -121,6 +145,34 @@
     .contact-text {
         gap: 2rem !important;
     }
+
+    .uvodni-text p {
+        font-size: 2rem !important;
+    }
+
+    .aside-text-img {
+        gap: 4rem !important;
+        flex-direction: column !important;
+    }
+
+    .reversed-ati {
+        flex-direction: column-reverse !important;
+    }
+    .tvorba-zpusob h5,
+    .tvorba-zpusob__eshop h5 {
+        font-size: 8rem !important;
+    }
+    .tvorba-zpusob{
+        height: 65vh !important;
+    }
+    .when-agile {
+        margin: 0 auto !important;
+        width: 80% !important;
+    }
+    .tab-content {
+        padding-top: 2rem !important;
+        border-radius: 100px !important;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -137,7 +189,12 @@
 
     .menu-contacts-left,
     .menu-contacts-right {
-       display: none;
+        display: none;
+    }
+
+    #web-dev-popis {
+        border-radius: 100px !important;
+        padding: 1rem 0 5rem !important;
     }
 }
 
@@ -147,7 +204,9 @@
     .git-container h5,
     .heading-ref,
     .contact-header h2,
-    .reference-header h2 {
+    .reference-header h2,
+    .nadpis-web h1,
+    .nadpis-tvorba-web h4 {
         font-size: 2.8rem !important;
     }
 
@@ -169,7 +228,8 @@
         padding: 15px 25px !important;
     }
 
-    .hero-sec-text h3 {
+    .hero-sec-text h3,
+    .uvodni-text p {
         width: 85% !important;
         font-size: 1.8rem !important;
     }
@@ -185,7 +245,8 @@
         max-width: 100% !important;
     }
 
-    .dot-pattern {
+    .dot-pattern,
+    .dot-pattern-web {
         display: none !important;
     }
 
@@ -278,6 +339,15 @@
 
     .second-menu li a {
         font-size: 1.7rem !important;
+    }
+
+    .uvodni-text {
+        flex-basis: auto !important;
+    }
+
+    #web-dev-popis h4,
+    .eshop-popis h4 {
+        font-size: 2rem !important;
     }
 }
 
@@ -1201,9 +1271,6 @@ nav ul li a:hover,
 .uvodni-text-container {
     display: flex;
     flex-direction: row;
-    /* background-color: #ffffff;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px; */
     position: relative;
     align-items: center;
 }
@@ -1573,10 +1640,7 @@ nav ul li a:hover,
 .tab-content {
     background-color: #1a1a1a;
     padding: 5rem 0 5rem;
-    border-top-right-radius: 200px;
-    border-top-left-radius: 200px;
-    border-bottom-left-radius: 200px;
-    border-bottom-right-radius: 200px;
+    border-radius: 200px;
 }
 
 .when-agile h4 {
@@ -1904,6 +1968,7 @@ nav ul li a:hover,
     gap: 8rem;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     width: 70%;
 }
 
