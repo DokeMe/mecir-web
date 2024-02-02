@@ -63,13 +63,15 @@
     }
 
     nav {
-        left: 20% !important;
+        left: 50% !important;
+        transform: translate(-50%) !important;
         top: 46% !important;
     }
 
     .second-menu {
         position: absolute;
-        left: 15%;
+        left: 50% !important;
+        transform: translate(-50%);
         top: 16% !important;
     }
 
@@ -93,7 +95,8 @@
     .tvorba-zpusob__eshop h5 {
         font-size: 12rem !important;
     }
-    .tvorba-zpusob{
+
+    .tvorba-zpusob {
         height: 80vh !important;
     }
 }
@@ -158,17 +161,21 @@
     .reversed-ati {
         flex-direction: column-reverse !important;
     }
+
     .tvorba-zpusob h5,
     .tvorba-zpusob__eshop h5 {
         font-size: 8rem !important;
     }
-    .tvorba-zpusob{
+
+    .tvorba-zpusob {
         height: 65vh !important;
     }
+
     .when-agile {
         margin: 0 auto !important;
         width: 80% !important;
     }
+
     .tab-content {
         padding-top: 2rem !important;
         border-radius: 100px !important;
@@ -348,6 +355,38 @@
     #web-dev-popis h4,
     .eshop-popis h4 {
         font-size: 2rem !important;
+    }
+
+    .tvorba-zpusob h5,
+    .tvorba-zpusob__eshop h5 {
+        font-size: 5rem !important;
+    }
+
+    .agile-img img {
+        width: 100% !important;
+        height: 700px;
+    }
+
+    .pros,
+    .cons {
+        width: 95% !important;
+        margin: 0 auto;
+        height: fit-content !important;
+    }
+    .pros h5,
+    .cons h5 
+    {
+        margin: 2rem 1rem 1rem !important;
+    }
+    .when-agile h4 {
+        font-size: 2rem !important;
+        text-align: center;
+    }
+    .aside-text-img img {
+        width: 100% !important;
+    }
+    .aside-text-img {
+        width: 90% !important;
     }
 }
 
@@ -942,6 +981,7 @@ nav ul li:nth-child(2) {
     position: absolute;
     right: 30%;
     top: 23%;
+    width: fit-content;
 }
 
 .second-menu li a {
@@ -952,7 +992,8 @@ nav ul li:nth-child(2) {
 
 .second-menu li {
     list-style: none;
-    width: 300px;
+    width: fit-content;
+    white-space: nowrap;
 }
 
 nav ul li {
